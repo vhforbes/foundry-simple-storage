@@ -7,9 +7,7 @@ import {SimpleStorage} from "../src/SimpleStorage.sol";
 
 contract DeploySimpleStorage is Script {
     function run() external returns (SimpleStorage) {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-
-        vm.startBroadcast(deployerPrivateKey);
+        vm.startBroadcast();
 
         SimpleStorage simpleStorage = new SimpleStorage();
 
